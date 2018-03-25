@@ -143,7 +143,7 @@ router.get('/archive/:archiveId/view', function (req, res) {
     }
 
     if (archive.status === 'available') {
-      res.redirect(archive.url);
+      res.send(archive.url);
     } else {
       res.render('view', { title: 'Archiving Pending' });
     }
